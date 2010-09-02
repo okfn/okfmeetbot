@@ -1,6 +1,6 @@
 USAGE
 ~~~~~
-http://wiki.debian.org/MeetBot
+http://wiki.ubuntu.com/ScribesTeam/MootBot
 
 Inspired by the original MeetBot, by Holger Levsen, which was itself a
 derivative of Mootbot (https://wiki.ubuntu.com/ScribesTeam/MootBot),
