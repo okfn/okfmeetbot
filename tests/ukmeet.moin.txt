@@ -1,0 +1,764 @@
+#title #ukmeet: this meeting
+
+Meeting started by daubers at 19:00:00 UTC.  The full logs are available
+at tests/ukmeet.log.html .
+
+
+
+== Meeting summary ==
+
+ * *Review of action items from last meeting
+  *  *Daviey to kick off team reporting and find interested parties to do regular reports  (daubers, 19:03:40)
+  *''LINK:'' https://lists.ubuntu.com/archives/ubuntu-uk/2010-April/023790.html   (Daviey, 19:05:30)
+  *''ACTION:'' People who have achieved something in April, please place it in the report  (daubers, 19:07:11)
+  *  *REPORT] AlanBell to find out what happened at the manchester jam  (daubers, 19:07:41)
+  *''LINK:'' http://loco.ubuntu.com/events/team/51/detail/   (AlanBell, 19:08:16)
+  *  *REPORT] Daviey and czajkowski to do more publicity on the geeknic  (daubers, 19:09:18)
+  *''ACTION:'' Daubers to either poke czajkowski to or get himself to send a mail to the -uk list this evning about the geeknic in Liverpool  (daubers, 19:12:34)
+  *  *REPORT] daubers to put support guidelines in a wiki page prior to next meeting  (daubers, 19:12:52)
+  *''LINK:'' https://wiki.ubuntu.com/UKTeam/Support_Guidelines   (daubers, 19:13:01)
+
+ * *Daubers - Support Guidelines
+  *''ACTION:'' Daubers to write a tal for Oggcamp on the proposed support guidelines  (daubers, 19:19:20)
+  *''ACTION:'' Daubers to send a mail to the list explaining the guidelines  (daubers, 19:24:40)
+  *''ACTION:'' Daubers to organise a meeting following the trial  (daubers, 19:24:52)
+
+ * *TBA - OGGCamp related bits
+  *''LINK:'' http://ideas.oggcamp.org/ is a collection of bits of oggcamp info  (AlanBell, 19:27:41)
+
+ * *TBA - UDS related bits
+
+ * *Any other business
+
+ * *Release Parties
+  *''LINK:'' http://www.evernote.com/pub/yamanickill/ubuntu   (yamanickill_, 19:37:48)
+  *''ACTION:'' Anyone in the vicinity of the Scottish Release Party to go, be sociable and enjoy themselves while celebrating Lucid  (daubers, 19:37:53)
+  *''LINK:'' http://loco.ubuntu.com/events/team/121/detail/   (AlanBell, 19:38:34)
+  *''LINK:'' http://loco.ubuntu.com/events/team/120/detail/   (daubers, 19:45:29)
+
+ * *Any other Business
+
+ * *Date of next meeting
+
+ * *Next meeting 2nd of June danfish to chair
+
+
+
+Meeting ended at 20:03:00 UTC.
+
+
+
+== Votes ==
+
+
+ * Should we have a beta trial of the support guidelines, followed by a meeting to review them?
+   For: 9 Against: 1 Abstained: 1
+
+
+
+== Action items ==
+
+ * People who have achieved something in April, please place it in the report
+ * Daubers to either poke czajkowski to or get himself to send a mail to the -uk list this evning about the geeknic in Liverpool
+ * Daubers to write a tal for Oggcamp on the proposed support guidelines
+ * Daubers to send a mail to the list explaining the guidelines
+ * Daubers to organise a meeting following the trial
+ * Anyone in the vicinity of the Scottish Release Party to go, be sociable and enjoy themselves while celebrating Lucid
+
+
+
+== People present (lines said) ==
+
+ * daubers (132)
+ * brobostigon (57)
+ * AlanBell (49)
+ * yamanickill_ (32)
+ * Daviey (17)
+ * Yorvyk (11)
+ * The_Toxic_Mite (9)
+ * Azelphur (8)
+ * BigRedS_ (4)
+ * dutchie (4)
+ * danfish (3)
+ * freesitebuilder_ (2)
+ * L0ki (2)
+ * MunkyJunky (2)
+ * TonyP (1)
+ * funkyHat (1)
+
+
+
+== Full Log ==
+
+
+ 19:00:00 <daubers> #startmeeting
+
+ 19:00:00 <daubers> #meetingtopic this meeting
+
+ 19:01:41 <AlanBell> o/
+
+ 19:01:47 <dutchie> o/
+
+ 19:01:54 <brobostigon> o/
+
+ 19:01:55 <daubers> Apologies if I muck up commands, my lappy screen is a bit small for two sets of crib sheets
+
+ 19:02:06 <Yorvyk> o/
+
+ 19:02:32 <daubers> Anyone who's present say so please :)
+
+ 19:02:42 <brobostigon> present
+
+ 19:02:43 <MunkyJunky> present
+
+ 19:02:44 <BigRedS_> present
+
+ 19:02:47 <daubers> present
+
+ 19:02:58 <Yorvyk> present
+
+ 19:03:14 <freesitebuilder_> present
+
+ 19:03:16 <Azelphur> present
+
+ 19:03:21 <L0ki> present
+
+ 19:03:31 <daubers> ok
+
+ 19:03:33 <daubers> #ToPic Review of action items from last meeting
+
+ 19:03:40 <daubers> #subtopic Daviey to kick off team reporting and find interested parties to do regular reports
+
+ 19:03:44 <daubers> Daviey?
+
+ 19:04:18 <Daviey> \o
+
+ 19:04:30 <The_Toxic_Mite> oops, present
+
+ 19:04:37 <daubers> How goes said reporting?
+
+ 19:04:41 <Daviey> Ok, deadline for April is technically this Sunday
+
+ 19:04:58 <Daviey> I've today posted to the LoCo list
+
+ 19:05:06 <Daviey> asking people to add activities
+
+ 19:05:20 * brobostigon read it.
+
+ 19:05:30 <Daviey> https://lists.ubuntu.com/archives/ubuntu-uk/2010-April/023790.html
+
+ 19:05:54 <Daviey> Essentially, it's a call for people to add anything they have achieved in April
+
+ 19:06:02 <Daviey> (or the LoCo)
+
+ 19:06:24 <Daviey> I'm going to poke a few people that i know have achieved stuff
+
+ 19:06:39 <Daviey> if people present could do that also, it would be grand
+
+ 19:06:48 <daubers> Excellent :)
+
+ 19:06:51 <brobostigon> willdo Daviey
+
+ 19:06:52 <brobostigon> :)
+
+ 19:07:11 <daubers> [ACTION] People who have achieved something in April, please place it in the report
+
+ 19:07:21 <brobostigon> :)
+
+ 19:07:26 <daubers> Shall we move on?
+
+ 19:07:27 <brobostigon> agreed.
+
+ 19:07:41 <daubers> [PROGRESS REPORT] AlanBell to find out what happened at the manchester jam
+
+ 19:07:45 <AlanBell> the manchester jam occured and seems to have gone well, MunkyJunky talked about it on the full circle podcast
+
+ 19:07:45 <Daviey> ta
+
+ 19:07:54 <Daviey> present btw :)
+
+ 19:08:05 <MunkyJunky> It did go well!
+
+ 19:08:16 <AlanBell> http://loco.ubuntu.com/events/team/51/detail/
+
+ 19:08:36 <daubers> Excellent, well done to those that organised it
+
+ 19:09:12 <daubers> Moving on?
+
+ 19:09:15 <AlanBell> yup
+
+ 19:09:18 <daubers> [PROGRESS REPORT] Daviey and czajkowski to do more publicity on the geeknic
+
+ 19:09:41 <daubers> Daviey?
+
+ 19:10:49 <daubers> czajkowski?
+
+ 19:11:05 <Daviey> no action from here.
+
+ 19:11:18 <brobostigon> she was talking about it in #ubuntu-uk not long ago.
+
+ 19:11:36 <daubers> Ok, can we someone volunteer to post to the mailing list?
+
+ 19:12:34 <daubers> [ACTION] Daubers to either poke czajkowski to or get himself to send a mail to the -uk list this evning about the geeknic in Liverpool
+
+ 19:12:42 <daubers> Ok, next
+
+ 19:12:52 <daubers> [PROGRESS REPORT] daubers to put support guidelines in a wiki page prior to next meeting
+
+ 19:13:01 <daubers> https://wiki.ubuntu.com/UKTeam/Support_Guidelines
+
+ 19:13:07 <brobostigon> :)
+
+ 19:13:27 <brobostigon> iam happy with it, right now.
+
+ 19:13:29 <daubers> I've popped these on the wiki now, and (think) I dropped an email to the list.
+
+ 19:13:38 <daubers> I'll go further into this in a second
+
+ 19:13:45 <daubers> since thats the end of the last meetings actions
+
+ 19:13:59 <daubers> [TOPIC] Daubers - Support Guidelines
+
+ 19:14:04 <brobostigon> Do we need to do a review of those proposedguidelines?
+
+ 19:14:46 <daubers> As I said these are now on the wiki, an I believe I emailed the mailing list. Do people want time to review them further and me to push them a bit more, or how would people like to proceed?
+
+ 19:15:13 <brobostigon> i would like to be able to review them, please.
+
+ 19:15:47 <AlanBell> would be good to share them about at UDS
+
+ 19:15:53 <daubers> Ok, are there any major failings in the proposed guidelines?
+
+ 19:16:13 <brobostigon> daubers: not that i can immediatly remember, no.
+
+ 19:16:16 <daubers> AlanBell: Would you be happy to do that? I'm not going
+
+ 19:16:29 <daubers> Work, money and stuff are in the way
+
+ 19:16:33 <AlanBell> I see no failures, but they can probably be expanded on over time
+
+ 19:16:52 <AlanBell> yes I can try and talk to other teams about them at UDS
+
+ 19:16:56 <brobostigon> I would be happier with review before proper adoption.
+
+ 19:17:18 <daubers> Awesome, if anyone thinks it would help, I'm happy to do a session at oggcamp
+
+ 19:17:21 <brobostigon> and good scruteny.
+
+ 19:17:54 <Yorvyk> I think they need to bee used to see if they work
+
+ 19:18:03 <AlanBell> an oggcamp session would be great
+
+ 19:18:42 <daubers> So, if I do an oggcamp session and write up some bits, are we happy to do a trial implimentation as of next week and then a review afterwards?
+
+ 19:18:56 <AlanBell> I am
+
+ 19:18:57 <daubers> See if I can organise a meeting dedicated to that [TOPIC]
+
+ 19:19:20 <daubers> [ACTION] Daubers to write a tal for Oggcamp on the proposed support guidelines
+
+ 19:19:44 <daubers> Do we want to vote on a trial implimentation?
+
+ 19:19:44 <brobostigon> ok.
+
+ 19:19:57 <AlanBell> ok
+
+ 19:19:58 <brobostigon> after review,yes.
+
+ 19:20:00 <The_Toxic_Mite> ok
+
+ 19:20:21 <brobostigon> not before.
+
+ 19:20:58 <daubers> brobostigon: Not sure there's a lot to review initially. They're set out fairly plainly in the wiki page. There will be a lot of wiggle room in the trial as well
+
+ 19:21:36 <BigRedS_> I'd suggest a trial to find out what needs adding. I've had a skim and there appears to be vagueness rather than anything likely disagreeable
+
+ 19:21:37 <brobostigon> daubers: i mean, for any big issues, thats all, or any possible additions or changes.
+
+ 19:21:53 <daubers> brobostigon: I think a trial would be best to hilight that (personally)
+
+ 19:22:10 <daubers> If it all fails during the trial then obviously it'll get pulled and discussed further
+
+ 19:22:22 <brobostigon> daubers: true, but a "not firm trial" rather thandefinate firm trial.
+
+ 19:22:35 <daubers> Yes, as I said, wit a lot of wiggle room
+
+ 19:22:46 <brobostigon> ok,
+
+ 19:22:49 <AlanBell> more of a beta than a release candidate
+
+ 19:22:54 <brobostigon> i am happy.
+
+ 19:22:58 <daubers> [VOTE] Should we have a beta trial of the support guidelines, followed by a meeting to review them?
+
+ 19:23:06 <AlanBell> +1
+
+ 19:23:08 <daubers> +1
+
+ 19:23:08 <brobostigon> +1
+
+ 19:23:12 <BigRedS_> +1
+
+ 19:23:14 <Yorvyk> +1
+
+ 19:23:19 <freesitebuilder_> 0
+
+ 19:23:27 <Azelphur> -1
+
+ 19:23:33 <L0ki> +1
+
+ 19:23:47 <TonyP> +1
+
+ 19:23:54 <danfish> +1
+
+ 19:24:07 <The_Toxic_Mite> +1
+
+ 19:24:16 <daubers> Blimey, I think we can take that as a yes
+
+ 19:24:21 <daubers> [ENDVOTE]
+
+ 19:24:31 * brobostigon goes to make a copy of the guidelines,
+
+ 19:24:40 <daubers> [ACTION] Daubers to send a mail to the list explaining the guidelines
+
+ 19:24:52 <daubers> [Action] Daubers to organise a meeting following the trial
+
+ 19:25:00 <daubers> Everyone happy?
+
+ 19:25:04 <brobostigon> yes.
+
+ 19:25:12 <daubers> Ok, moving the train along :)
+
+ 19:25:21 <daubers> [TOPIC] TBA - OGGCamp related bits
+
+ 19:25:27 <Azelphur> hehe, I did 99.9% of stuff that was in the guidelines anyway :)
+
+ 19:25:31 <Yorvyk> Should the IRC channel be informed
+
+ 19:25:40 <daubers> Yorvyk: I'll do that as well
+
+ 19:25:50 <Yorvyk> ok
+
+ 19:25:53 <Daviey> daubers: Wikipage + url to [TOPIC]?
+
+ 19:25:54 <AlanBell> ok, so who is going to oggcamp?
+
+ 19:26:05 <Yorvyk> o/
+
+ 19:26:06 <dutchie> o/
+
+ 19:26:07 <AlanBell> o/
+
+ 19:26:17 <daubers> o/
+
+ 19:26:26 <daubers> Daviey: Yes please :)
+
+ 19:26:49 <daubers> sorry, I moved on a bit quick there
+
+ 19:27:21 <daubers> Would Daviey or anyone like to say a few words about oggcamp?
+
+ 19:27:41 <AlanBell> http://ideas.oggcamp.org/ is a collection of bits of oggcamp info
+
+ 19:28:00 <AlanBell> in particular look at the talks page
+
+ 19:28:42 <AlanBell> and there is of course the geeknic on Friday afternoon
+
+ 19:28:45 <yamanickill_> have i missed the meeting
+
+ 19:28:48 <yamanickill_> ahhh that'll be a no
+
+ 19:28:50 <yamanickill_> good
+
+ 19:28:58 <daubers> Anyone considering a talk, do it! :)
+
+ 19:28:59 <AlanBell> yamanickill_: still proceeding
+
+ 19:29:17 <daubers> Also, anyone I've not yet met, come say hello!
+
+ 19:29:22 <yamanickill_> AlanBell: cool thanks, sorry if i missed my section
+
+ 19:29:53 <daubers> Any other Oggcamp business people would like raised?
+
+ 19:30:24 <dutchie> go to oggcamp!
+
+ 19:30:32 <daubers> :) We'll move along then
+
+ 19:30:41 <daubers> Steaming through today
+
+ 19:30:47 <daubers> [TOPIC] TBA - UDS related bits
+
+ 19:31:05 <AlanBell> I am going to UDS
+
+ 19:31:11 <daubers> Anybody intending to attend UDS?
+
+ 19:31:18 <AlanBell> and I found out today I am doing crew for it too
+
+ 19:31:19 <The_Toxic_Mite> No
+
+ 19:31:37 <daubers> AlanBell: \o/ Crew is the best thing to do at these things
+
+ 19:31:44 <Yorvyk> I am in the vacinty that week so might pop in
+
+ 19:31:47 <AlanBell> popey and Daviey are going, amongst others
+
+ 19:31:54 <brobostigon> writing a blueprint thoygh
+
+ 19:32:25 <AlanBell> if there is anything that you want raised with the wider community then fill in blueprints or hassle people who are going
+
+ 19:32:30 <AlanBell> or both
+
+ 19:32:55 <daubers> If poeple want help finding who to hassle or with blueprints please ask in the channel
+
+ 19:33:08 <brobostigon> will do
+
+ 19:33:36 <daubers> AlanBell: Anything else you wanted to cover here?
+
+ 19:33:46 <AlanBell> no, don't think so
+
+ 19:33:50 <daubers> Ok
+
+ 19:33:51 <AlanBell> party on the Eurostar
+
+ 19:34:04 <daubers> Heh, just don't go starting any fires!
+
+ 19:34:35 <danfish> eggplant =! aubergine
+
+ 19:34:38 <daubers> [TOPIC] Any other business
+
+ 19:34:49 <daubers> Anyone like to raise something?
+
+ 19:34:52 <yamanickill_> want an update on scottish release party?
+
+ 19:35:06 <daubers> yamanickill_: Yes please!
+
+ 19:35:10 <daubers> I must have missed that
+
+ 19:35:12 <daubers> sorry :(
+
+ 19:35:15 <AlanBell> wasn't there a release parties [TOPIC]?
+
+ 19:35:21 <daubers> [TOPIC] Release Parties
+
+ 19:35:21 <yamanickill_> AlanBell: yeah, but i wasn't here
+
+ 19:35:30 <yamanickill_> i couldn't get onto irc
+
+ 19:35:42 <yamanickill_> the planning for this party is going pretty well. 1 week to go until the party
+
+ 19:35:55 * The_Toxic_Mite smacks his head
+
+ 19:36:07 <yamanickill_> we have almost everything organised. didn't get any sponsors for beer, so we are just gonna let people BYOB
+
+ 19:36:15 <yamanickill_> and everything is going good :-
+
+ 19:36:18 <yamanickill_> :-)
+
+ 19:36:21 <The_Toxic_Mite> yamanickill_: Where's the party going to be?
+
+ 19:36:26 <daubers> yamanickill_: Got a link for your release party info?
+
+ 19:36:31 * brobostigon sneaks in banbury
+
+ 19:36:37 <The_Toxic_Mite> brobostigon: ^_^
+
+ 19:36:44 <yamanickill_> The_Toxic_Mite: it is in the Strathclyde university union
+
+ 19:36:57 <yamanickill_> daubers: erm its on the release parties page, me thinks
+
+ 19:37:02 <yamanickill_> you mean detailed info?
+
+ 19:37:04 <AlanBell> release parties should be now added to the loco directory
+
+ 19:37:06 <The_Toxic_Mite> yamanickill_: Ah. Glasgow's fairly inconvenient for me, and given that I have exams on, I may not be allowed to come
+
+ 19:37:09 <daubers> yamanickill_: Yes please
+
+ 19:37:27 <yamanickill_> ok, well the only detailed info that is public is the info on my evernote...2 secs lemme get the link
+
+ 19:37:48 <yamanickill_> http://www.evernote.com/pub/yamanickill/ubuntu
+
+ 19:37:53 <daubers> [ACTION] Anyone in the vicinity of the Scottish Release Party to go, be sociable and enjoy themselves while celebrating Lucid
+
+ 19:38:11 <daubers> Awesome :)
+
+ 19:38:20 <Daviey> +1
+
+ 19:38:21 <daubers> yamanickill_: Can you make sure a reminder goes to the -uk list?
+
+ 19:38:28 <AlanBell> ok, London party is tomorrow night
+
+ 19:38:31 <yamanickill_> daubers: yep, will do that
+
+ 19:38:31 <brobostigon> daubers: banbury also please.:)
+
+ 19:38:34 <AlanBell> http://loco.ubuntu.com/events/team/121/detail/
+
+ 19:38:36 * The_Toxic_Mite checks timetables on nationalrail.co.uk
+
+ 19:38:42 <daubers> action yamanickill to send a reminder to the list
+
+ 19:38:56 <daubers> brobostigon: Once AlanBell is done with London we'll come to you
+
+ 19:39:04 <brobostigon> :)
+
+ 19:39:16 <brobostigon> i am eating, so give me a shout.
+
+ 19:39:19 <daubers> Was the London one organised by Canonical again this time around?
+
+ 19:39:21 <AlanBell> so the London party is in a wine bar in Pall Mall
+
+ 19:39:30 <AlanBell> it is canonical organised, they sorted the venue
+
+ 19:39:57 <AlanBell> but we had some input into it and it should be a bit classier than before :-)
+
+ 19:40:08 <daubers> Excellent :)
+
+ 19:40:14 <AlanBell> not sure of the age limit
+
+ 19:40:48 <AlanBell> anyone under 21 and intending to go might want to give them a call and check first
+
+ 19:41:02 <funkyHat> If only I didn't have college the following morning, I might have caught the train down from Northampton
+
+ 19:41:14 <AlanBell> see you all tomorrow o/
+
+ 19:41:24 <daubers> Good good :)
+
+ 19:41:28 <daubers> So to Banbury
+
+ 19:41:30 <brobostigon> one sec.
+
+ 19:41:51 <daubers> action People attending the London launch part to enjoy themselves immensley
+
+ 19:41:58 <brobostigon> okies
+
+ 19:42:07 <Azelphur> ...or else?
+
+ 19:42:11 * BigRedS_ will do his best
+
+ 19:42:20 <daubers> brobostigon, over to you
+
+ 19:42:36 <brobostigon> saturday night, may 1st, olde reindeer inn, more social.
+
+ 19:42:48 <brobostigon> nothing to formal,
+
+ 19:42:57 <yamanickill_> daubers: aw...can the scottish launch party people not enjoy themselves?
+
+ 19:43:07 <daubers> yamanickill_: That was already actioned
+
+ 19:43:11 <brobostigon> also need to be of the right age, and dress responably smart/casual.
+
+ 19:43:21 <brobostigon> reasonably*
+
+ 19:43:33 <daubers> brobostigon: What's the age limit?
+
+ 19:43:33 <brobostigon> around 7:30pm start,
+
+ 19:43:40 <yamanickill_> daubers: ha, nothing about fun tho :-P
+
+ 19:43:44 <brobostigon> daubers: generally over 21.
+
+ 19:44:03 <daubers> Ok, and is there an event page?
+
+ 19:44:21 <brobostigon> daubers: on loco.ubuntu.com and onthe wiki. yes.
+
+ 19:44:39 <brobostigon> ido have the paghe infront of me,
+
+ 19:44:43 <brobostigon> dont*
+
+ 19:45:00 <daubers> ok, http://loco.ubuntu.com/events/team/120/detail/
+
+ 19:45:11 <daubers> Looks to be the one
+
+ 19:45:16 <brobostigon> thats it.
+
+ 19:45:29 <daubers> http://loco.ubuntu.com/events/team/120/detail/
+
+ 19:45:34 <daubers> Thank you Mr Bot
+
+ 19:45:43 <daubers> Ok, any other release parties?
+
+ 19:46:20 <daubers> action People attending Banbury release party to enjoy themselves
+
+ 19:46:26 <brobostigon> :)
+
+ 19:46:31 <Daviey> I have a bottle of port waiting for my personal release party :)
+
+ 19:46:38 <brobostigon> and good beer, :) as always,
+
+ 19:46:43 <daubers> Daviey: May I suggest some cheese with that?
+
+ 19:47:05 <Daviey> daubers: you may!
+
+ 19:47:08 <daubers> Ok :) Going back to AOB
+
+ 19:47:14 <daubers> [TOPIC] Any other Business
+
+ 19:47:36 <AlanBell> I just phoned the London venue, it is over 18
+
+ 19:47:39 <daubers> Anyone like to raise any issues?
+
+ 19:48:05 <dutchie> go to oggcamp!
+
+ 19:48:05 <brobostigon> generally over 18 is fine for banbury, aswell,
+
+ 19:48:20 <brobostigon> but over 21 is there as a rule for certain peole.
+
+ 19:48:41 <daubers> Okey dokey.
+
+ 19:48:54 <daubers> brobostigon: Can you drop a reminder to the -uk list too please?
+
+ 19:49:08 <daubers> for the banbury party
+
+ 19:49:14 <brobostigon> daubers: yes, :)
+
+ 19:49:16 <daubers> action
+
+ 19:49:33 <daubers> action brobostigon to send reminder to mailing list re: banbury release party
+
+ 19:49:43 <daubers> No more business?
+
+ 19:49:50 <brobostigon> not from here, no.
+
+ 19:50:14 <AlanBell> May 6th, don't forget to vote
+
+ 19:50:29 <daubers> Oh yes, everybody remember to vote on the 6th
+
+ 19:50:37 <brobostigon> :) always,
+
+ 19:50:40 <Azelphur> AlanBell: oh cool, is that when the election is?
+
+ 19:50:43 <daubers> Those who are eligable anyway
+
+ 19:51:04 <AlanBell> Azelphur: yes
+
+ 19:51:07 <Azelphur> i see
+
+ 19:51:19 <Azelphur> I registered at aboutmyvote.org but never received any papers yet
+
+ 19:51:38 <Azelphur> aboutmyvote.co.uk, rather
+
+ 19:51:47 <daubers> Ok, shall we organise the next meeting?
+
+ 19:51:47 <yamanickill_> ahh yes...the election
+
+ 19:51:53 <daubers> [TOPIC] Date of next meeting
+
+ 19:52:07 <yamanickill_> are we continuing on the 1st wed of each month?
+
+ 19:52:10 <yamanickill_> apart from today obv
+
+ 19:52:18 <AlanBell> I think so
+
+ 19:52:29 <yamanickill_> i'm happy with that. not so good with the last wed
+
+ 19:52:57 <daubers> Is it ok for me to organise an out of sequence meeting the following week to chase support guidelines? Or would people rather we have it run for 2 weeks
+
+ 19:53:07 <daubers> (though that would be 2 weeks)
+
+ 19:53:29 * AlanBell is confused
+
+ 19:53:42 * yamanickill_ is also confused
+
+ 19:53:46 <brobostigon> sothree insted of two?
+
+ 19:53:47 <daubers> The first wednesday of the month would be next week
+
+ 19:54:10 <AlanBell> ok, this meeting was brought forward a week to be in front of release and oggcamp
+
+ 19:54:18 <daubers> Ah, ok
+
+ 19:54:19 <brobostigon> true
+
+ 19:54:31 <AlanBell> the next meeting I was expecting would be July 7th
+
+ 19:54:35 <AlanBell> oops, no
+
+ 19:54:43 <AlanBell> June 2nd
+
+ 19:55:18 <AlanBell> so when do you want the support guidelines meeting?
+
+ 19:55:29 <brobostigon> as long as not, tuesday evening, i amhappy, i play chess tuesday evening.
+
+ 19:55:33 <daubers> I'd like to run that on the week containing the 14th
+
+ 19:56:05 <brobostigon> i am happy to go with everyone else on this one, i am very free.
+
+ 19:56:09 <daubers> Which lets it run for 2 weeks
+
+ 19:56:29 <AlanBell> UDS is the week containing the 14th
+
+ 19:56:35 <daubers> Ah, ok, so the following week
+
+ 19:56:47 <AlanBell> sounds good
+
+ 19:56:48 <yamanickill_> is there internet at uds? :-P
+
+ 19:56:59 <brobostigon> sounds fine here.
+
+ 19:57:19 <daubers> action Daubers to organise support meeting on the 19th of April
+
+ 19:57:39 <brobostigon> i am hppy.
+
+ 19:57:48 <daubers> Can we have a chair for the meeting on the 7th of July? (as that is a general meeting)
+
+ 19:58:10 <brobostigon> count me out, my internet is not reliable right now, consistently.
+
+ 19:58:14 <Yorvyk> April ??
+
+ 19:58:24 <AlanBell> danfish for chair?
+
+ 19:58:37 <daubers> sorry :( I'll correct that in the minutes, I meant may
+
+ 19:58:38 <yamanickill_> june...not july
+
+ 19:58:42 <daubers> and june
+
+ 19:58:47 <daubers> I'm rubbish at this!
+
+ 19:58:55 <yamanickill_> :-P
+
+ 19:59:06 <daubers> danfish: Would you like to volunteer?
+
+ 19:59:22 <daubers> or yamanickill_ ?
+
+ 19:59:32 <Yorvyk> 19 may is a tuesday
+
+ 19:59:56 <daubers> Yorvyk: It's a wednesday according to my calender
+
+ 20:00:20 <Daviey> We can leave it without a chair, and get a volunteer prior to the start of the next
+
+ 20:00:23 <Yorvyk> OK wring Year
+
+ 20:00:25 <yamanickill_> i'll go for it if someone tells me what to do. i've no iea what to do. this is the 2nd of june, yeah?
+
+ 20:00:53 <daubers> yamanickill_: 7th of june :)
+
+ 20:01:04 <daubers> according to AlanBell
+
+ 20:01:09 <danfish> yep, I'll voluteer - flattered!
+
+ 20:01:22 <yamanickill_> 7th is a friday...that was the july one wasn't it?
+
+ 20:01:31 <yamanickill_> wow this is confusing just now
+
+ 20:01:37 <daubers> yamanickill_: 7th is a monday
+
+ 20:01:38 <AlanBell> 2nd of June!
+
+ 20:01:42 <daubers> ok
+
+ 20:01:58 <daubers> Next meeting: 2nd of June
+
+ 20:02:08 <daubers> danfish or yamanickill_: Who'd like to do it?
+
+ 20:02:38 <yamanickill_> danfish: you go for it
+
+ 20:02:49 <yamanickill_> i'll take it some other time
+
+ 20:02:51 <daubers> [TOPIC] Next meeting 2nd of June danfish to chair
+
+ 20:03:00 <daubers> #endmeeting
+
+
+
+Generated by MeetBot 0.1.4 (http://wiki.ubuntu.com/AlanBell)
