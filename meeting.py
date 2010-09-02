@@ -280,9 +280,13 @@ class MeetingCommands(object):
             self.reply("updated")
         if line.strip():
             self.do_meetingtopic(nick=nick, line=line, time_=time_, **kwargs)
-    def do_endmeeting(self, nick, time_, **kwargs):
+
+    def do_endmeeting(self, nick, time_,line, **kwargs):
         """End the meeting."""
         if not self.isChair(nick): return
+        #close any open votes
+        if not self.activeVote=="":
+            self.do_endvote(nick=nick,line=line,**kwargs)
         if self.oldtopic:
             self.topic(self.oldtopic)
         self.endtime = time_
