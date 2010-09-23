@@ -84,8 +84,8 @@ class Config(object):
     startMeetingMessage = ("Meeting started %(starttime)s %(timeZone)s.  "
               "The chair is %(chair)s. Information about MeetBot at "
               "%(MeetBotInfoURL)s.\n"
-              "Useful Commands: #action #agreed #help #info #idea #link "
-              "#topic.")
+              "Useful Commands: #topic #action #link #idea #voters #vote #chair #action #agreed #help #info "
+              "#endmeeting.")
     endMeetingMessage = ("Meeting ended %(endtime)s %(timeZone)s.  "
                          "Information about MeetBot at %(MeetBotInfoURL)s . "
                          "(v %(__version__)s)\n"
@@ -277,7 +277,6 @@ class MeetingCommands(object):
         message = self.config.startMeetingMessage%repl
         for messageline in message.split('\n'):
             self.reply(messageline)
-            self.reply("updated")
         if line.strip():
             self.do_meetingtopic(nick=nick, line=line, time_=time_, **kwargs)
 
