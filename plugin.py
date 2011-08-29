@@ -114,10 +114,22 @@ class MeetBot(callbacks.Plugin):
                 (channel, network, time.ctime()))
             if len(recent_meetings) > 10:
                 del recent_meetings[0]
+        if payload[:7]=='#replay':
+            if M is not None:
+                irc.error("Can't replay logs while a meeting is in progress.")
+                return
+            M = meeting.replay_meeting(channel=channel)
+            meeting_cache[Mkey] = M
+            recent_meetings.append(
+                (channel, network, time.ctime()))
+            if len(recent_meetings) > 10:
+                del recent_meetings[0]
+
         # If there is no meeting going on, then we quit
         if M is None: return
         # Add line to our meeting buffer.
-        M.addline(nick, payload)
+        isop=(nick in irc.state.channels[channel].ops)
+        M.addline(nick, payload,isop)
         # End meeting if requested:
         if M._meetingIsOver:
             #M.save()  # now do_endmeeting in M calls the save functions

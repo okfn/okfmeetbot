@@ -33,6 +33,7 @@ import time
 import os
 import re
 import stat
+import urllib
 
 import writers
 import items
@@ -267,6 +268,15 @@ class MeetingCommands(object):
     #  linenum= <the line number, 1-based index (for logfile)>
     #  time_=   <time it was said>
     # Commands for Chairs:
+    def do_replay(self,nick,time_,line, **kwargs):
+        url=line.strip()
+        self.reply("looking for meetings in %s"%url)
+        sock = urllib.urlopen(url)
+        htmlSource = sock.read()
+        sock.close()
+        print htmlSource
+
+
     def do_startmeeting(self, nick, time_, line, **kwargs):
         """Begin a meeting."""
         self.starttime = time_
@@ -278,9 +288,9 @@ class MeetingCommands(object):
         if line.strip():
             self.do_meetingtopic(nick=nick, line=line, time_=time_, **kwargs)
 
-    def do_endmeeting(self, nick, time_,line, **kwargs):
+    def do_endmeeting(self, nick, time_,line, isop, **kwargs):
         """End the meeting."""
-        if not self.isChair(nick): return
+        if not self.isChair(nick) and not isop: return
         #close any open votes
         if not self.activeVote=="":
             self.do_endvote(nick=nick,line=line,**kwargs)
@@ -294,20 +304,6 @@ class MeetingCommands(object):
             self.reply(messageline)
         self._meetingIsOver = True
 
-    def do_endmeetingforce(self, nick, time_,line, **kwargs):
-        """End the meeting."""
-        #close any open votes
-        if not self.activeVote=="":
-            self.do_endvote(nick=nick,line=line,**kwargs)
-        if self.oldtopic:
-            self.topic(self.oldtopic)
-        self.endtime = time_
-        self.config.save()
-        repl = self.replacements()
-        message = self.config.endMeetingMessage%repl
-        for messageline in message.split('\n'):
-            self.reply(messageline)
-        self._meetingIsOver = True
         
     def do_topic(self, nick, line, **kwargs):
         """Set a new topic in the channel."""
@@ -608,7 +604,7 @@ class Meeting(MeetingCommands, object):
     def save(self, **kwargs):
         return self.config.save(**kwargs)
     # Primary entry point for new lines in the log:
-    def addline(self, nick, line, time_=None):
+    def addline(self, nick, line,isop=False ,time_=None):
         """This is the way to add lines to the Meeting object.
         """
         linenum = self.addrawline(nick, line, time_)
@@ -626,7 +622,7 @@ class Meeting(MeetingCommands, object):
             
             if hasattr(self, "do_"+command):
                 getattr(self, "do_"+command)(nick=nick, line=line,
-                                             linenum=linenum, time_=time_)
+                                             linenum=linenum, time_=time_,isop=isop)
         else:
             # Detect URLs automatically
             if line.split('//')[0] in self.config.UrlProtocols:
@@ -734,6 +730,17 @@ def process_meeting(contents, channel, filename,
             line = m.group(3).strip()
             M.addline(nick, "ACTION "+line, time_=time_)
     return M
+
+def replay_meeting(channel
+,                    extraConfig = {},
+                    dontSave=False,
+                    safeMode=True):
+    
+    M = Meeting(channel=channel, owner=None,
+                writeRawLog=False, safeMode=safeMode,
+                extraConfig=extraConfig)
+
+
 
 # None of this is very well refined.
 if __name__ == '__main__':
