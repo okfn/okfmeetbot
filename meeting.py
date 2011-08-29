@@ -39,7 +39,7 @@ import items
 reload(writers)
 reload(items)
 
-__version__ = "0.1.4"
+__version__ = "0.1.5"
 
 class Config(object):
     #
@@ -83,12 +83,9 @@ class Config(object):
     # message.
     startMeetingMessage = ("Meeting started %(starttime)s %(timeZone)s.  "
               "The chair is %(chair)s. Information about MeetBot at "
-              "%(MeetBotInfoURL)s.\n"
-              "Useful Commands: #topic #action #link #idea #voters #vote #chair #action #agreed #help #info "
-              "#endmeeting.")
+              "%(MeetBotInfoURL)s.\n")
     endMeetingMessage = ("Meeting ended %(endtime)s %(timeZone)s.  "
-                         "Information about MeetBot at %(MeetBotInfoURL)s . "
-                         "(v %(__version__)s)\n"
+                         "\n"
                          "Minutes:        %(urlBasename)s.moin.txt")
                          
     #TODO: endMeetingMessage should get filenames from the writers
@@ -277,12 +274,28 @@ class MeetingCommands(object):
         message = self.config.startMeetingMessage%repl
         for messageline in message.split('\n'):
             self.reply(messageline)
+        self.do_commands()
         if line.strip():
             self.do_meetingtopic(nick=nick, line=line, time_=time_, **kwargs)
 
     def do_endmeeting(self, nick, time_,line, **kwargs):
         """End the meeting."""
         if not self.isChair(nick): return
+        #close any open votes
+        if not self.activeVote=="":
+            self.do_endvote(nick=nick,line=line,**kwargs)
+        if self.oldtopic:
+            self.topic(self.oldtopic)
+        self.endtime = time_
+        self.config.save()
+        repl = self.replacements()
+        message = self.config.endMeetingMessage%repl
+        for messageline in message.split('\n'):
+            self.reply(messageline)
+        self._meetingIsOver = True
+
+    def do_endmeetingforce(self, nick, time_,line, **kwargs):
+        """End the meeting."""
         #close any open votes
         if not self.activeVote=="":
             self.do_endvote(nick=nick,line=line,**kwargs)
@@ -416,7 +429,16 @@ class MeetingCommands(object):
         #people can vote by saying +1 0 or -1
         #if voters have been specified then only they can vote
         #there can be multiple votes called in a meeting
+    def do_votesrequired(self, nick, line, **kwargs):
+        """set the number of votes required to pass a motion - useful for council votes where 3 of 5 people need to +1 for example"""
+        if not self.isChair(nick): return
+        try:
+            self.votesrequired=int(line.strip())
+        except ValueError:
+            self.votesrequired=0
+        self.reply("votes now need %s to be passed")
     def do_endvote(self, nick, line, **kwargs):
+        if not self.isChair(nick): return
         """this vote is over, record the results"""
         if self.activeVote=="":
             self.reply("No vote in progress")
@@ -427,19 +449,22 @@ class MeetingCommands(object):
         vagainst=0
         vabstain=0
         for v in self.currentVote:
-            if self.currentVote[v]=='-1':
+            if re.match("-1",self.currentVote[v]):
                 vagainst+=1
-            elif self.currentVote[v]=='0':
+            elif re.match("0|\+0",self.currentVote[v]):
                 vabstain+=1
-            elif self.currentVote[v]=='+1':
+            elif re.match("\+1",self.currentVote[v]):
                 vfor+=1
         self.reply("Votes for:"+str(vfor)+" Votes against:"+str(vagainst)+" Abstentions:"+str(vabstain))
-        if vfor-vagainst>0:
+        if vfor-vagainst>self.votesrequired:
             self.reply("Motion carried")
-        elif vfor-vagainst<0:
+        elif vfor-vagainst<self.votesrequired:
             self.reply("Motion denied")
         else:
-            self.reply("Deadlock")
+            if self.votesrequired==0:
+                self.reply("Deadlock, casting vote may be used")
+            else:
+                self.reply("Motion carried")
         self.votes[self.activeVote]=[vfor,vabstain,vagainst]#store the results
 
         self.activeVote=""#allow another vote to be called
@@ -543,6 +568,7 @@ class Meeting(MeetingCommands, object):
         self.chairs = {}
         self.voters = {}
         self.votes={}
+        self.votesrequired=0
         self.activeVote = ""
         self._writeRawLog = writeRawLog
         self._meetingTopic = None
@@ -611,7 +637,7 @@ class Meeting(MeetingCommands, object):
                 self.do_link(nick=nick, line=line,
                              linenum=linenum, time_=time_)
         self.save(realtime_update=True)
-        if line in ["+1","0","-1"]:
+        if re.match("\+1|0|\+0|-1",line):
             self.doCastVote(nick,line,time_)
     def doCastVote(self, nick, line, time_=None):
             """if a vote is underway and the nick is a registered voter
