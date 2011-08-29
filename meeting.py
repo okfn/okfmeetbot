@@ -436,7 +436,7 @@ class MeetingCommands(object):
             self.votesrequired=int(line.strip())
         except ValueError:
             self.votesrequired=0
-        self.reply("votes now need %s to be passed")
+        self.reply("votes now need %s to be passed"%self.votesrequired)
     def do_endvote(self, nick, line, **kwargs):
         if not self.isChair(nick): return
         """this vote is over, record the results"""
@@ -595,14 +595,10 @@ class Meeting(MeetingCommands, object):
     def settopic(self):
         "The actual code to set the topic"
         if self._meetingTopic:
-            topic = '%s (Meeting topic: %s)'%(self.currenttopic,
-                                              self._meetingTopic)
+            topic = '%s | %s Meeting | Current topic:  %s'%(self.oldtopic, self._meetingTopic, self.currenttopic)
         else:
             topic = self.currenttopic
         self.topic(topic)
-        #if the bot does not have op access in the channel then just print the new topic
-        #
-        self.reply("TOPIC: "+topic)
     def addnick(self, nick, lines=1):
         """This person has spoken, lines=<how many lines>"""
         self.attendees[nick] = self.attendees.get(nick, 0) + lines
