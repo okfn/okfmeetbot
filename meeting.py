@@ -288,9 +288,9 @@ class MeetingCommands(object):
         if line.strip():
             self.do_meetingtopic(nick=nick, line=line, time_=time_, **kwargs)
 
-    def do_endmeeting(self, nick, time_,line, isop, **kwargs):
+    def do_endmeeting(self, nick, time_,line, **kwargs):
         """End the meeting."""
-        if not self.isChair(nick) and not isop: return
+        if not self.isChair(nick): return
         #close any open votes
         if not self.activeVote=="":
             self.do_endvote(nick=nick,line=line,**kwargs)
@@ -600,7 +600,9 @@ class Meeting(MeetingCommands, object):
         self.attendees[nick] = self.attendees.get(nick, 0) + lines
     def isChair(self, nick):
         """Is the nick a chair?"""
-        return (nick == self.owner  or  nick in self.chairs)
+        return (nick == self.owner  or  nick in self.chairs or self.isop)
+    def isop(self,nick):
+        return self.isop
     def save(self, **kwargs):
         return self.config.save(**kwargs)
     # Primary entry point for new lines in the log:
@@ -612,7 +614,7 @@ class Meeting(MeetingCommands, object):
         if time_ is None: time_ = time.localtime()
         nick = self.config.dec(nick)
         line = self.config.dec(line)
-
+        self.isop = isop
         # Handle any commands given in the line.
         matchobj = self.config.command_RE.match(line)
         if matchobj is not None:
@@ -622,7 +624,7 @@ class Meeting(MeetingCommands, object):
             
             if hasattr(self, "do_"+command):
                 getattr(self, "do_"+command)(nick=nick, line=line,
-                                             linenum=linenum, time_=time_,isop=isop)
+                                             linenum=linenum, time_=time_)
         else:
             # Detect URLs automatically
             if line.split('//')[0] in self.config.UrlProtocols:
