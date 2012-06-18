@@ -5,7 +5,7 @@ class Config(object):
     filenamePattern = '%(channel)s/%%Y/%(channel)s.%%F-%%H.%%M'
 
     logUrlPrefix = 'http://mootbot.libertus.co.uk/'
-    MeetBotInfoURL = 'http://wiki.ubuntu.com/AlanBell'
+    MeetBotInfoURL = 'https://wiki.ubuntu.com/meetingology'
     writer_map = {
         #'.log.html':writers.HTMLlog,
         #'.1.html': writers.HTML,
