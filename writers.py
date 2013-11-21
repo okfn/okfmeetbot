@@ -110,8 +110,8 @@ class _BaseWriter(object):
                 'starttime':time.strftime("%H:%M:%S", self.M.starttime),
                 'endtime':time.strftime("%H:%M:%S", self.M.endtime),
                 'timeZone':self.M.config.timeZone,
-                'fullLogs':self.M.config.basename+'.log.html',
-                'fullLogsFullURL':self.M.config.filename(url=True)+'.log.html',
+                'fullLogs':self.M.config.basename+'.html',
+                'fullLogsFullURL':self.M.config.filename(url=True)+'.html',
                 'MeetBotInfoURL':self.M.config.MeetBotInfoURL,
                 'MeetBotVersion':MeetBotVersion(),
              }

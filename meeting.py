@@ -87,7 +87,7 @@ class Config(object):
               "%(MeetBotInfoURL)s.\n")
     endMeetingMessage = ("Meeting ended %(endtime)s %(timeZone)s.  "
                          "\n"
-                         "Minutes:        %(urlBasename)s.moin.txt")
+                         "Minutes:        %(urlBasename)s.txt")
                          
     #TODO: endMeetingMessage should get filenames from the writers
 
